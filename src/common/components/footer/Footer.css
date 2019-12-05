@@ -1,20 +1,23 @@
-.footer{
-    padding-top: 65px;
-    background-color:#f8f8f8
+.footer {
+  padding-top: 65px;
+  background-color: #f8f8f8
 }
-.footer_inner{
-    padding-bottom: 65px;
+
+.footer_inner {
+  padding-bottom: 65px;
 }
-.footer_logo{
-    margin-bottom: 30px;
-    font-size:46px;
-    font-weight:700;
-    color:red;
+
+.footer_logo {
+  margin-bottom: 30px;
+  font-size: 46px;
+  font-weight: 700;
+  color: red;
 
 }
-.footer_text{
-    margin-bottom:30px;
-    font-size: 30px;
-    color:999px;
-    
+
+.footer_text {
+  margin-bottom: 30px;
+  font-size: 30px;
+  color: 999px;
+
 }

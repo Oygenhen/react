@@ -1,11 +1,11 @@
 import React from 'react';
 
-class Ownpage extends React.Component{
-   
-    render() {
-      
-      return (
-          
-      )
-    }
+class Ownpage extends React.Component {
+
+  render () {
+
+    return (
+
+    );
+  }
 }

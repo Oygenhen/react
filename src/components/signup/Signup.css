@@ -1,36 +1,42 @@
-.body{
-    background-image: url("../../img/back1.jpg");
+.signup_container {
+  background: linear-gradient(rgba(105, 105, 105, .5), #fff), url("../../img/back1.jpg");
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.signup_container{
-    width:450px;
-    background-color: rgba(24, 33, 52, 0.7);
-    margin: 100px auto 0 auto;
-    text-align: center;
-    box-shadow: 0 -5px 0 #d31525;
-    padding-bottom: 20px;
-   }   
-   
-   input[type="text"],input[type="password"]{
-    width: 300px;
-    height:50px;
-    font-size: 18px;
-    margin-bottom:10px;
-    border-radius: 4px;
-    padding-left: 40px;
-   }    
 
-   .signup_submit {
-    padding: 13px 30px;
-    margin: 5px 0 20px 0;
-    font-size: 15px;
-    color: #fff;
-    background-image: linear-gradient(to right,rgb(179, 15, 43) 0%, rgb(240, 17, 55) 51%, rgb(238, 78, 104) 100%);;
-    border: none;
-    border-bottom: 4px solid #d31525;
-    cursor: pointer;
-   }    
-   .signup_submit:hover{
-    transition: all 0.5s;
-    background: rgb(178, 34, 34, 0.9);
-    color: wheat;
-   }    
+.signup_form {
+  width: 450px;
+  background-color: rgba(24, 33, 52, 0.7);
+  box-shadow: 0 -5px 0 #d31525;
+  padding-bottom: 20px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+input[type="text"], input[type="password"] {
+  width: 300px;
+  height: 50px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  padding-left: 40px;
+}
+
+.signup_submit {
+  padding: 13px 30px;
+  margin: 5px 0 20px 0;
+  font-size: 15px;
+  color: #fff;
+  background-image: linear-gradient(to right, rgb(179, 15, 43) 0%, rgb(240, 17, 55) 51%, rgb(238, 78, 104) 100%);;
+  border: none;
+  border-bottom: 4px solid #d31525;
+  cursor: pointer;
+}
+
+.signup_submit:hover {
+  transition: all 0.5s;
+  background: rgb(178, 34, 34, 0.9);
+  color: wheat;
+}

@@ -1,45 +1,73 @@
 import React from 'react';
-import { Button, Form, FormGroup,  Input } from 'reactstrap';
+import { Button, Form, FormGroup, Input } from 'reactstrap';
+import { loginReq } from '../../helpers/auth';
 import './Login.css';
 
-
-
-class Login extends React.Component{
+class Login extends React.Component {
   state = {
     login: '',
     password: '',
-}
+    error: null,
+  };
 
-onClickHandler = (e) => {
+  onClickHandler = async (e) => {
     e.preventDefault();
-    this.props.auth(this.state.login, this.state.password);
-}
+    const {login, password} = this.state;
 
-onLoginChange = (e) => {
-    this.setState({...this.state, login: e.target.value});
-}
+    try {
+      const loginData = await loginReq({login, password});
+      if (loginData.token) {
+        localStorage.setItem('auth', loginData.token);
+        localStorage.setItem('name', `${loginData.name || ''} ${loginData.surname || ''}`.trim());
+      }
+    } catch (error) {
+      this.setState({ error })
+    }
+  };
 
-onPasswordChange = (e) => {
-    this.setState({...this.state, password: e.target.value});
-}
-  render() {
+  onFieldChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  render () {
     return (
-        <body className="body">
-    <div className="container_login">
-        <Form>
-        <FormGroup className="login_input">
-          <Input type="text" name="nickname" id="NickName" placeholder="Введите логин" onChange={this.onLoginChange}/>
-        </FormGroup>
-        <FormGroup className="login_input">
-      
-          <Input type="password" name="password" id="Password" placeholder="Введите пароль" onChange={this.onPasswordChange}/>
-        </FormGroup>
-        
-        <Button className="login_submit" onClick={this.onClickHandler}>Вход</Button>
-      </Form>
-    </div>
-    </body>
-  )};
+      <div className="container_login">
+        <Form className="login_form">
+          { this.state.error }
+          <FormGroup className="login_input">
+            <Input
+              type="text"
+              name="login"
+              id="login"
+              placeholder="Введите логин"
+              onChange={this.onFieldChange}
+              maxLength="255"
+              required
+            />
+          </FormGroup>
+          <FormGroup className="login_input">
+            <Input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Введите пароль"
+              onChange={this.onFieldChange}
+              maxLength="255"
+              required
+            />
+          </FormGroup>
+          <Button
+            className="login_submit"
+            onClick={this.onClickHandler}
+          >
+            Вход
+          </Button>
+        </Form>
+      </div>
+    );
+  };
 }
 
 export default Login; 

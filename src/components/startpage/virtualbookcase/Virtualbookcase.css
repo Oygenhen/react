@@ -1,15 +1,23 @@
-.vir_bookcase{
-    display:flex;
-    margin: 0-15px;
+.vir_bookcase {
+  display: flex;
+  margin: 0 -15px;
 
 }
-.vir_bookcase_item{
-    width:50%;
-    padding:0 15px;
+
+.vir_bookcase_container {
+  display: flex;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.vir_bookcase_item {
+  width: 50%;
+  padding: 0 15px;
 
 }
-.vir_img{
-    display: block;
-    max-width:100%;
-    height: auto;
+
+.vir_img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
