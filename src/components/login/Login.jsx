@@ -21,7 +21,7 @@ class Login extends React.Component {
         localStorage.setItem('name', `${loginData.name || ''} ${loginData.surname || ''}`.trim());
       }
     } catch (error) {
-      this.setState({ error })
+      this.setState({error:error.message})
     }
   };
 
@@ -56,6 +56,7 @@ class Login extends React.Component {
               onChange={this.onFieldChange}
               maxLength="255"
               required
+              autoComplete="on"
             />
           </FormGroup>
           <Button

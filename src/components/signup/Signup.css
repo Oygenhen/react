@@ -22,6 +22,7 @@ input[type="text"], input[type="password"] {
   margin-bottom: 10px;
   border-radius: 4px;
   padding-left: 40px;
+  background: white;
 }
 
 .signup_submit {

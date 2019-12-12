@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Input } from 'reactstrap';
 import { searchBooks } from '../../../helpers/books';
+import './Search.css'
 
 class Search extends Component {
   state = {
@@ -24,17 +25,18 @@ class Search extends Component {
   render () {
     return (
       <>
-        <div>
+        <div className="searchLine">
           <Input
             type="search"
             name="search"
+            placeholder="Искать здесь..."
             onChange={this.search}
           />
         </div>
-        <div>
+        <div className="result">
           {this.state.error}
           {(this.state.searchResult || this.state.searchResult.length === 0)
-            ? 'No results'
+            ? 'Нет результатов поиска'
             : this.state.searchResult.map(result => <p>{result}</p>)
           }
         </div>

@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import Search from '../../common/components/search/Search'
-import { logout } from '../../helpers/auth';
+import Footer from '../../common/components/footer/Footer';
+import BookHeader from './bookHeader/BookHeader';
+import BookProfile from './bookProfile/BookProfile';
+
 
 class BooksPage extends Component {
   render () {
-    const name = localStorage.getItem('name');
+  
     return (
       <div>
-        <button onClick={logout}>Выйти</button>
-        <div>{`Привет, ${name}!`}</div>
-        <Search />
+        <BookHeader/>
+        <BookProfile/>
+        <Footer/>
       </div>
     );
   }

@@ -1,3 +1,5 @@
+
+
 export const makeRequest = (url, method = 'GET', data, headers) => {
   const requestHeaders = new Headers();
 
@@ -17,7 +19,7 @@ export const makeRequest = (url, method = 'GET', data, headers) => {
     init.body = JSON.stringify(data);
   }
 
-  return fetch(url, init)
+  return fetch('http://localhost:8080'+url, init)
     .then(response => response.json())
     .catch(err => Promise.reject(err));
 };

@@ -19,7 +19,7 @@ function App () {
           return <BooksPage/>
         }
 
-        return <Redirect to='/' />
+         return <Redirect to='/'/>
       }}/>
     </Switch>
   );
