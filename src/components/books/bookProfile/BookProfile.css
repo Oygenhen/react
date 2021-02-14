@@ -1,0 +1,35 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: url("./../../../img/back.jpg") center no-repeat;
+    background-size: cover;
+    min-height: 820px;
+    position: relative;
+  }
+  
+  .profile_title {
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  
+  .profile_inner {
+    text-align: center;
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  
+  .profile_title:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: white;
+    margin: 60px auto 60px;
+  }

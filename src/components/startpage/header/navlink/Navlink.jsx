@@ -1,14 +1,15 @@
-import React from 'react'
-import '../navlink/Navlink.css'
-import {Link} from 'react-router-dom'
-import Routes from './../../../../routes'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import routes from '../../../../routes';
+import '../navlink/Navlink.css';
 
-
-function Navlink(){
-    return(<nav class="nav">
-   <Link className="nav_link" to={Routes.Login.path}>{Routes.Login.text}</Link>
-    <Link className="nav_link" to={Routes.SignUp.path}>{Routes.SignUp.text}</Link>
-    </nav>)
+function Navlink () {
+  return (
+    <nav>
+      <NavLink className="nav_link" to={routes.login.path}>{routes.login.text}</NavLink>
+      <NavLink className="nav_link" to={routes.signUp.path}>{routes.signUp.text}</NavLink>
+    </nav>
+  );
 }
 
 export default Navlink;

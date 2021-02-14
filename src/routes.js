@@ -1,11 +1,14 @@
 export default {
-  Login: {
-    text : 'Вход',
-    path : '/login',
+  login: {
+    text: 'Вход',
+    path: '/login',
   },
-  SignUp: {
-    text : 'Регистрация',
-    path : '/signup',
+  signUp: {
+    text: 'Регистрация',
+    path: '/signup',
   },
- 
+  books: {
+    text: 'Книги',
+    path: '/books',
   }
+};
